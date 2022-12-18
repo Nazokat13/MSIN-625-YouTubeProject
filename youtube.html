@@ -1,0 +1,48 @@
+<!--Nazokat Samandarova, 11/30/2022 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Search</title>
+  <link rel="stylesheet" href="css/youtube.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"/>
+</head>
+
+<body>
+  <div id="container">
+    <header>
+      <h1>Search<span>Videos</span></h1>
+      <p>Search all YouTube videos</p>
+    </header>
+    <!-- Results displayed below -->
+    <section>
+      <!-- Will contain the search bar -->
+      <form id="searchForm" name="searchForm" onsubmit="return search()">
+        <div class="fieldContainer">
+          <input type="submit" name="search-btn" id="search-btn" value="">
+          <input type="search" id="query" class="search-field" placeholder="Search YouTube...">
+        </div>
+      </form>
+
+      <ul id="results"></ul>
+      <div id="buttons"></div>
+    </section>
+    <footer>
+      <p>Copyright &copy; 2022, All Rights Reserved</p>
+    </footer>
+  </div>
+  <!-- CDN - content deliver network - for the jQuery library -->
+  <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+  <script src="js/youtube.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.fancybox').fancybox();
+    });
+  </script>
+</body>
+
+</html>
